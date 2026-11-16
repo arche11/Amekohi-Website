@@ -1,0 +1,149 @@
+header {
+    background: linear-gradient(135deg, #7a5000 0%, #a56e00 50%, #ab7d2e 100%);
+    color: #fcfcfc;
+    padding: 10px 25px;
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 20%;
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #fcfcfc;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+nav a:hover {
+    color: #ffe0a3;
+    text-decoration: underline;
+}
+
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: #fdf6e9;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+section h2 {
+    color: #906001;
+    text-align: center;
+    margin: 0 0 15px 0;
+}
+
+#beranda {
+    text-align: center;
+}
+
+#beranda p {
+    font-size: 18px;
+    color: #3b2400;
+}
+
+#beranda img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    margin-top: 15px;
+    background-color: #fcfcfc;
+}
+
+th {
+    background-color: #906001;
+    color: #fcfcfc;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #d7ccc8;
+}
+
+form {
+    max-width: 550px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ecc381;
+}
+
+form p {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin: 10px;
+    border: 1px solid #bcaaa4;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+button {
+    background-color: #906001;
+    color: #fcfcfc;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #7a5000;
+}
+
+footer {
+    background-color: #906001;
+    color: #fcfcfc;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+}

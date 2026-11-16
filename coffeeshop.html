@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AmeKohi | Coffee Shop</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="brand">
+                <img src="logo.png" alt="Logo AmeKohi">
+            </div>
+            <h1>AmeKohi</h1>                    
+                <nav>
+                    <a href="#beranda" style="text-decoration: none">Beranda</a>  |
+                    <a href="#menu" style="text-decoration: none">Menu Utama</a>  |
+                    <a href="#kontak" style="text-decoration: none">Hubungi Kami</a>  |
+                    <a href="#about" style="text-decoration: none">Tentang Kami</a> |
+                </nav>
+        </header>   
+
+
+         <hr />
+
+
+        <main>
+            <section id="beranda">
+                <h2>AmeKohi</h2>
+                <p>Sebuah coffee shop yang banyak diminati berbagai kalangan dan generasi 
+                </p>
+                <img style="border-radius: 10px;"
+                src="banner.png" 
+                alt="Logo AmeKohi" 
+                width="600px"
+                height="220px">
+                <p>
+                <button type="button" id="TombolSapaan">Sapa Pengunjung</button>                 
+                </p>
+                <p id="hasilSapaan"></p>
+
+            </section>
+            <section id="menu">
+                <h2> Menu Best Seller</h2>
+                <label for="cariMenu">Cari Menu:</label>
+                <input type="text" id="cariMenu" 
+                placeholder="Ketikan nama menu yang dicari..." />
+                <table border="1" cellpadding="8">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Menu</th>
+                            <th>Kategori</th>
+                            <th>Harga</th>
+                            <th>Gambar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="daftarMenu">
+
+                        <tr>
+                            <td>1</td>
+                            <td>Ame Signature</td>
+                            <td>Coffee</td>
+                            <td>Rp 22.000</td>
+                            <td><img src="Ame Signature.jpg" alt="Ame Signature" width="100px" height="100px"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Ame Latte</td>
+                            <td>Coffee</td>
+                            <td>Rp 21.000</td>
+                            <td><img src="Ame Latte.jpg" alt="Ame Latte" width="100px" height="100px"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Americano</td>
+                            <td>Coffee</td>
+                            <td>Rp 15.000</td>
+                            <td><img src="Americano.jpg" alt="Americano" width="100px" height="100px"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Matcha Latte</td>
+                            <td>Non-Coffee</td>
+                            <td>Rp 24.000</td>
+                            <td><img src="Matcha Latte.jpg" alt="Matcha Latte" width="100px" height="100px"></td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Cloudy Toast</td>
+                            <td>Pastry</td>
+                            <td>Rp 25.000</td>
+                            <td><img src="Cloudy Toast.jpg" alt="Cloudy Toast" width="100px" height="100px"></td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Croissant</td>
+                            <td>Pastry</td>
+                            <td>Rp 30.000</td>
+                            <td><img src="Croissant.jpg" alt="Croissant" width="100px" height="100px"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p id="hasilPencarian"></p>
+            </section>
+            <section id="kontak">
+                <h2>Hubungi Kami</h2>
+                <form action="#" method="POST" id="formKontak">
+                    <p>
+                        <label>Nama Lengkap:</label>
+                        <input type="text"
+                            id="nama"
+                            placeholder="Ketikan Nama Anda"
+                        />
+                    </p>
+                    <p>
+                        <label>Email:</label>
+                        <input type="email"
+                            id="email"
+                            name="email"
+                            placeholder="nama@gmail.com"
+                        />
+                    </p>
+                    <p>
+                        <label>Pesan:</label>
+                        <textarea id="pesan"
+                        name="pesan"
+                        rows="4"
+                        cols="30"
+                        placeholder="Tulis Pesan Anda di sini..."
+                        ></textarea>
+                    </p>
+                    <p>
+                        <button type="submit">Kirim Pesan</button>
+                    </p>
+                </form>
+
+                <p id="hasilForm"></p>
+            </section>
+
+        </main>
+        <section id="about">
+          
+<section id="about-us">
+        <h2>About Us</h2>
+
+    <br>
+
+   <ul>
+        <li>Aditya Rayyan H.</li>
+        <li>Muhammad Ghaisan F.</li>
+        <li>Zandya Eka M.</li>
+        <li>Muhammad Ahsan M.</li>
+    </ul>
+
+    <br>
+
+    
+
+</section>
+        </section>
+
+        <hr />
+        <footer>
+            <p>&copy; <span id="tahun"></span> AmeKohi By Ame Production.</p>
+        </footer>
+
+        <script>
+            const namaToko = "AmeKohi";
+            let jumlahPengunjung = 0;
+
+            function sapaPengunjung() {
+                jumlahPengunjung++;
+                
+                const hasil = document.getElementById("hasilSapaan");
+                hasil.textContent
+                 = "Selamat datang di " + 
+                  namaToko + 
+                  "! Anda adalah pengunjung ke-" +
+                  jumlahPengunjung + 
+                  ".";
+
+                  alert("Selamat datang di " + namaToko + "! Anda adalah pengunjung ke-" + jumlahPengunjung + ".");
+            }
+
+            document
+            .getElementById("TombolSapaan")
+            .addEventListener("click", sapaPengunjung);
+
+    const inputCari = document.getElementById("cariMenu");
+    const barisMenu = document.querySelectorAll("#daftarMenu tr");
+    const hasilPencarian = document.getElementById("hasilPencarian");
+
+    inputCari.addEventListener("input", function () {
+        const kataKunci = inputCari.value.toLowerCase();
+        let JumlahDitemukan = 0;
+
+        barisMenu.forEach(function (baris) {
+            const namaMenu = baris.cells[1].textContent.toLowerCase();
+            const kategori = baris.cells[2].textContent.toLowerCase();
+
+            if (namaMenu.includes(kataKunci) || kategori.includes(kataKunci)) {
+                baris.style.display = "";
+                JumlahDitemukan++;
+            } else {
+                baris.style.display = "none";
+            }
+        });
+
+    if (JumlahDitemukan > 0) {
+        hasilPencarian.textContent = 
+        "Ditemukan " + JumlahDitemukan + " menu.";
+    } else {
+        hasilPencarian.textContent = "Menu tidak ditemukan.";
+    }
+});
+
+document
+.getElementById("formKontak")
+.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const nama = document.getElementById("nama").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const pesan = document.getElementById("pesan").value.trim();
+
+   if (nama === "" || email === "" || pesan === "") {
+    document.getElementById("hasilForm").textContent = "Semua kolom wajib diisi.";3
+    } else {
+        document.getElementById("hasilForm").textContent = "Terima kasih, " +
+         nama +
+          "! Pesan Anda telah dikirim. Email: " +
+           email;
+
+           document.getElementById("formKontak").reset();
+    }
+});
+
+    const tahunSekarang = new Date().getFullYear();
+    document.getElementById("tahun").textContent = tahunSekarang;
+        </script>
+    </body>
+</html>
